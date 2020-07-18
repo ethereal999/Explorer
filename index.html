@@ -2,30 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
     <title>Wikipedia Graph</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
   <link rel="stylesheet" href="public/css/style.css" type="text/css"/>
 </head>
 <body>
- <div class="formbox" >
-       <input type="text" id="pagename" placeholder="Enter what to you want to know about" autocomplete="off">
-
-       <button type="submit" id="submit" name="button">Go</button>
-       </div>
-<div id="container" class="fullscreen">
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
 
 
-    <div id="info">
-      <h1>Wikipedia Map</h1>
-      <p>A tool for visualizing the connections between Wikipedia pages by Luke Taylor</p>
-
+        <h1>Welcome to Explorer!</h1>
+        <h2>We create <span class="typed" data-typed-items="Visualisations, Network of Data, Tree Of Synonyms"></span></h2>
+        <div class="actions scrollto">
+          <a href="#about" class="btn-get-started">Get Started</a>
+          <!--<a href="#services" class="btn-services">About</a>-->
+        </div>
+      </div>
     </div>
-  </div>
+  </section><!-- End Hero -->
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-12" align="center">
+            <h3 class="section-title">How it works?</h3>
+            <div class="section-title-divider"></div>
+            <p class="section-description">Search for the word that you want to explore! <br> Then if you click on the node created you will get related synonyms to that word, keep on exploring and get the data visualisation.</p>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+
+   <div class="container network ">
+        <div class="row" align="center">
+
+
+
+                 <div class="searchb">
+  <input type="text" id="pagename" placeholder="Enter what to you want to know about" autocomplete="off">
+
+      <div class="search"></div>
+</div>
+
+
+ <button type="submit" id="submit" class="go" name="button" >Go</button>
+            <button type="submit" id="refresh" class="go" name="button" >Refresh</button>
+
+
+
+        </div>
+       <br><br><br>
+
+      </div>
+
+      <div class="container">
+<div  id="container" class=" neumorphism-2"></div>
+    <br><br>
+</div>
+  </main>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
-  <script type="text/javascript" src="public/js/expand.js"> </script>
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="public/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="public/vendor/php-email-form/validate.js"></script>
+  <script src="public/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="public/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="public/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="public/vendor/venobox/venobox.min.js"></script>
+  <script src="public/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript" src="public/js/parser.js"> </script>
+  <script type="text/javascript" src="public/js/expand.js"> </script>
+
 
  <script type="text/javascript" src="public/js/main_script.js"> </script>
+ <script type="text/javascript" src="public/js/frontend.js"> </script>
 
 
 
