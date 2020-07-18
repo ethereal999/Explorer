@@ -1,0 +1,20 @@
+{
+  "name": "grapher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wikipedia-parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "i": "^0.3.6",
+    "node-fetch": "^2.6.0",
+    "powerthesaurus-api": "^2.0.2",
+    "vis": "^4.21.0-EOL"
+  }
+}

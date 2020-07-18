@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+.commafield {
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow: hidden;
+  height: 33px;
+  padding: 3px;
+  margin: 0;
+
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.commafield input {
+  font-size: 1em;
+
+  /* Kill default styles */
+  outline: none;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+
+  /* Layout */
+  margin: 2px 5px 3px 0;
+  padding: 0 5px;
+  flex: 2;
+  height: 85%;
+}
+
+.item {
+  float: left;
+
+  background-color: rgba(204, 230, 249, 0.6);
+  font-size: 1em;
+
+  padding: 1px 5px 2px 5px;
+  margin: 2px 5px 3px 0;
+
+  flex: 0 1 auto;
+  height: 85%;
+  line-height: 130%;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.item::after {
+  /* Font styles */
+  font-size: 90%;
+  line-height: 90%;
+  color: #ec725d;
+
+  /* Add a close button */
+  font-family: Ionicons;
+  content: "\00a0\f12a";
+
+  /* Allow animating the unfurl of the close button */
+  transition: max-width 0.3s ease-in-out;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 0;
+}
+.item:hover {
+  background-color: rgba(255, 200, 200, 0.6);
+}
+.item:hover::after {
+  max-width: 15px; /* Animate the x unfurling. */
+}
+
+
+/* Styles for the top bar */
+
+/* The box that holds the button and input */
+#formbox {
+  padding: 0;
+  display: block;
+  overflow: hidden;
+
+  /* Position */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+
+  /* Appearance */
+  box-shadow: 0 4px 4px -2px #ccc;
+}
+
+/* The buttons */
+#formbox button {
+  /* Color */
+  background-color: rgba(255, 255, 255, 0.6);
+
+  /* Border */
+  outline: none;
+
+  /* Other */
+  padding: 5px 7px;
+  margin: 0;
+  font-size: 18px;
+  float: right;
+  height: 33px;
+  min-width: 33px;
+}
+i.icon.ion-refresh {
+  display: block;
+  transition: all 0.8s ease-in-out;
+}
+i.icon:hover.ion-refresh {
+  transform: rotate(360deg);
+}
+i.icon.ion-refresh:before {
+  position: relative;
+  left: 2px;
+}
+
+/* To create lines between elements, everything has a right border besides the last element */
+#formbox > * {
+  border: none;
+  border-right: 1px solid #ccc;
+}
+
+#formbox > *:first-child { /* first-child is last because 'float:right;' changes order */
+  border-right: none;
+  padding: 5px 10px;
+}
+/* Parent of #info, just used to center #info for right now. */
+#container {
+  text-align: center;
+}
+
+/* Contains for the info initially presented to the user */
+#info {
+  margin: 55px 13px 0 13px;
+  max-width: 450px;
+  padding: 25px;
+
+  border: 2px solid #ccc;
+
+  display: inline-block;
+}
+
+#info h1 {
+  margin-top: 0;
+}
+
+#info p {
+
+}
+
+
+/* == Rules for small screens == */
+
+@media (max-width: 750px) { /* Full width on small screens (namely iPhones) */
+  #info {
+    max-width: 100%;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media (max-height: 400px) { /* Hide text on iPhones in portrait to prevent button from being cut off */
+  #info p {
+    display: none;
+  }
+}
+.fullscreen {
+  /* Same size as window */
+  width: 100vw;
+  height: 100vh;
+
+  /* No space from top corner */
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
