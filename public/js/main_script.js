@@ -48,6 +48,8 @@ const submitButton = document.getElementById('submit');
 
 initialpages.forEach((page)=>{
     if(page.length>0){
+
+     if (nodes.getIds().indexOf(page) === -1) {
     nodes.add([
       {
         id: lash(page),
@@ -72,6 +74,7 @@ initialpages.forEach((page)=>{
         parent: lash(page), // Parent is self
       },
     ]);
+    }
     }
 
 });
