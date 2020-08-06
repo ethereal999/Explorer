@@ -43,6 +43,9 @@ function getSubPages(pageName) {
 }
 
 */
+
+const chbut = document.getElementById('switchy');
+
 function getColor(level) {
   return lightenHex('#03C4EB', 5 * level); // Gets 5% lighter for each level
 }
@@ -52,17 +55,47 @@ const api= 'd4539b1d311281379caa242526c45c44';
 
 function httpGet(theUrl)
 {
+
     var xmlHttp = new XMLHttpRequest();
+
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+
     xmlHttp.send( null );
+
+
     return xmlHttp.responseText;
 }
 
 function getSubPages(pageName){
+console.log(chbut.checked);
+var types=(chbut.checked==true)?'syn':'ant';
+
 const url = endpoint + api +'/'+pageName+'/json';
 var subpages = new Array(10);
     var synonyms = JSON.parse(httpGet(url));
+        if(types=='syn'){
+         if(synonyms.noun){
      subpages = synonyms.noun.syn;
+     }
+     if(synonyms.adjective){
+    subpages= synonyms.adjective.syn;
+     }
+
+        }
+        else if(types=='ant'){
+         if(synonyms.noun){
+     subpages = synonyms.noun.ant;
+     }
+     if(synonyms.adjective){
+    subpages= synonyms.adjective.ant;
+     }
+}
+    else{
+        console.log("Error");
+    }
+
+
+
      if(subpages.length>10){
         subpages = subpages.slice(0,10);
      }
@@ -72,5 +105,9 @@ var subpages = new Array(10);
 }
 
 function lash(page){
-    return page.charAt(0).toUpperCase() + page.slice(1)
+        if(page.length>1){
+        return page.charAt(0).toUpperCase() + page.slice(1)
+        }
+
+    return null;
 }

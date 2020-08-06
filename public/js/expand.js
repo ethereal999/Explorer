@@ -8,8 +8,7 @@ function getEdgeConnecting(a, b) {
 function expandNodeCallback(page, data) {
   const node = nodes.get(page); // The node that was clicked
   const level = node.level + 1; // Level for new nodes is one more than parent
-  const subpages = data;
-
+  const subpages = Array.from(new Set(data));
   // Add all children to network
   const subnodes = [];
   const newedges = [];
@@ -42,7 +41,7 @@ function expandNodeCallback(page, data) {
       });
     }
 
-    if (!getEdgeConnecting(page, subpageID)) { // Don't create duplicate edges in same direction
+    if (!getEdgeConnecting(page, subpageID) && lash(page)!=lash(subpageID)) { // Don't create duplicate edges in same direction
       newedges.push({
         from: page,
         to: subpageID,
@@ -59,7 +58,7 @@ function expandNodeCallback(page, data) {
 
 function nodeexpantion(page){
  const label = nodes.get(page).label;
-  const pagename = label;
+  const pagename = lash(label);
   getSubPages(pagename).then(data => expandNodeCallback(page, data));
 }
 

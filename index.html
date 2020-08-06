@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Synonym Explorer</title>
+    <title> Explorer!</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 
   <link rel="stylesheet" href="public/css/style.css" type="text/css"/>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"> </script>
 </head>
 <body>
   <section id="hero">
@@ -34,7 +35,7 @@
           <div class="col-md-12" align="center">
             <h3 class="section-title">How it works?</h3>
             <div class="section-title-divider"></div>
-            <p class="section-description">Search for the word that you want to explore! <br> Then if you click on the node created you will get related synonyms to that word, keep on exploring and get the data visualisation.</p>
+            <p class="section-description">Search for the word that you want to explore! <br> Then if you double-click on the node created you will get related words to that word, keep on exploring and get the data visualisation.</p>
           </div>
 
       </div>
@@ -57,7 +58,14 @@
 
       <div class="search"></div>
 </div>
-
+<div class="che">
+	<div class="input-switch">
+		<label for="switchy">Antonyms</label>
+		<input type="checkbox" id="switchy" class="input" />
+		<label for="switchy" class="switch"></label>
+		<label for="switchy">Synonyms</label>
+	</div>
+</div>
 
  <button type="submit" id="submit" class="go" name="button" >Go</button>
             <button type="submit" id="refresh" class="go" name="button" >Refresh</button>
@@ -73,10 +81,24 @@
 <div  id="container" class=" neumorphism-2"></div>
     <br><br>
 </div>
+        <section id="hero" style="  height: 50vh">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+
+
+
+        <h2>About Me </h2>
+        <h2><span class="typeds" data-typed-items="I am Nishank Siddharth, Currently Pursuing BTech Programme, From IITG in field of CSE, I love to make web apps"></span></h2>
+          |<div id="foote">
+ © Copyright 2020 Nishank. All rights reserved.
+</div>
+      </div>
+    </div>
+  </section>
   </main>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
   <script src="public/vendor/jquery/jquery.min.js"></script>
   <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="public/vendor/jquery.easing/jquery.easing.min.js"></script>
