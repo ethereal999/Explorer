@@ -6,8 +6,8 @@
 ![Main Home Page](https://github.com/ethereal999/Explorer/blob/master/public/img/1.jpg)
 
 ## Main Features
-- [Get Started]
-- [Interactive Search]
+- [Get Started](#get-started)
+- [Interactive Search](#interactive-search)
 - [Network Expantion]
 - [Manipulation]
 
