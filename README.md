@@ -8,8 +8,8 @@
 ## Main Features
 - [Get Started](#get-started)
 - [Interactive Search](#interactive-search)
-- [Network Expantion]
-- [Manipulation]
+- [Network Expantion](#network-expantion)
+- [Manipulation](#manipulation-of-network)
 
 
 ### Get Started
